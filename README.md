@@ -27,11 +27,14 @@ methods are compared with one another and with a classical nonlinear approach to
 
 In this paper we propose a novel technique for **quantum machine learning** (QML) which allows for grayscale-image datasets the **automatic generation of quantum-inspired kernels for classification** by using Quantum Support Vector Machine (QSVM), based on Multi-Objective Genetic Algorithms (MO-GA).
 
-
-
 The goal of the technique is to achieve the quantum circuit that provides the **best accuracy** on test data, as well as the **smallest ansatz size**. Since the objective of the fitness function is the test accuracy, we force the circuits-solution to be robust and to **avoid overfitting effects, being quantum classifiers with a high generalization power**. 
 
 Taking into account the ansatz size, our goal is to minimize it as much as possible in order to have solutions that avoid expressivity problems. This is possible because we code identity gates, which allows the **possibility of eliminating gates, layers and even reduce the number of qubits in the circuits**.
+
+<p align="center">
+    <img src="https://github.com/sergio94al/AutoQML-Quantum-Inspired-Kernels-by-Using-Genetic-Algorithms-for-Grayscale-images/blob/main/Images/AUTOQML_DECODE.png" width="400" height="30">
+</p>
+
 
 ### 2.1 Quantum Circuits Optimization Algorithm
 
