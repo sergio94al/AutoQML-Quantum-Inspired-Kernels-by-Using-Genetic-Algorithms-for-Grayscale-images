@@ -32,7 +32,7 @@ The goal of the technique is to achieve the quantum circuit that provides the **
 Taking into account the ansatz size, our goal is to minimize it as much as possible in order to have solutions that avoid expressivity problems. This is possible because we code identity gates, which allows the **possibility of eliminating gates, layers and even reduce the number of qubits in the circuits**.
 
 <p align="center">
-    <img src="https://github.com/sergio94al/AutoQML-Quantum-Inspired-Kernels-by-Using-Genetic-Algorithms-for-Grayscale-images/blob/main/AUTOQML_DECODE.png" width="400" height="350">
+    <img src="https://github.com/sergio94al/AutoQML-Quantum-Inspired-Kernels-by-Using-Genetic-Algorithms-for-Grayscale-images/blob/main/AUTOQML_DECODE.png" width="600" height="350">
 </p>
 
 
