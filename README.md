@@ -48,6 +48,10 @@ Taking into account the ansatz size, our goal is to minimize it as much as possi
 
 * **Step 5**: The process is repeated until convergence or when stop conditions are achieved. **The best individuals are kept in the Pareto front**.
 
+<p align="center">
+    <img src="https://github.com/sergio94al/AutoQML-Quantum-Inspired-Kernels-by-Using-Genetic-Algorithms-for-Grayscale-images/blob/main/AUTOQML_DECODE.png" width="500" height="250">
+</p>
+
 
 ## 5. Files Description
 
