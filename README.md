@@ -65,6 +65,8 @@ We have defined two dimensionality reduction methods. One embeds the method dire
   <img src="https://github.com/sergio94al/AutoQML-Quantum-Inspired-Kernels-by-Using-Genetic-Algorithms-for-Grayscale-images/blob/main/fitness_function.png" width="600" height="350">
 </p>
 
+Individuals are evaluated in the **evaluation function or *fitness***. The output of this function will determine whether the individual is accurate for the given problem or not. In the proposed technique, the **binary strings are converted into quantum circuits** which will act as feature maps into QSVM. Firstly, the classifier is fitted with training set and then we make predictions over test set (data not previously seen by the model) **-seeking generalization power-**, getting the objective of the fitness function. At the same time, we calculate the number of gates penalizing doubly the entangling operators due to a higher computational cost. We calculate a metric -Weight Control- in order to find a **balance between both metrics**, the accuracy and the reduction of number of gates. It is important since a high weight on the reducing circuit size objetive can lead less accuracy because of information loss.
+
 #### 3.2.1 PCA Approach
 One of the proposed approaches is PCA. In this case, the first six bits of the individual are taken and used to determine the number of components. This number, after apply the transformations is the number of variables to be embedded in the rotation operators of the circuit. As it has been commented, the maximum individual size is calculated as M × N × 7. In this approach, seven more bits are added to the individual to be used as the number of components in order to maintain the same chain size of the quantum circuit. In this case, the string length is calculated as M × N × 7 + 7. The first six bits are used only to ensure a fair comparison with the other approximation methods, leaving the bit number seven of the individual unused. However, more bits could be used in this dimensionality reduction method encoding. The number of features is limited to 6 bits, resulting in a maximum of 64 dimensions, as $2^6$.
 
@@ -97,14 +99,6 @@ In the CAE approach, a small convolutional autoencoder neural network is pretrai
 
 * Iterate the processes starting from Step 4 until the algorithm converges or the defined stop conditions are reached, obtaining the Pareto front.
 
-## 5. Quantum Circuits Optimization Algorithm
-
-* **Step 1**: Firstly, quantum gates CNOT and parameterized in the X,Y,Z,I axes with four associated angles are pre-coded to binary code. Each gate is coded into seven bits, being the first three bits for gate selection and the last four bits for angle if necessary. During the process, binary strings (individuals) are created, which will encode for a specific ansatz.
-* **Step 2**: A starting population is created -Initial population.
-* **Step 3**: These individuals are evaluated in the **evaluation function or *fitness***. The output of this function will determine whether the individual is accurate for the given problem or not. In the proposed technique, the **binary strings are converted into quantum circuits** which will act as feature maps into QSVM. Firstly, the classifier is fitted with training set and then we make predictions over test set (data not previously seen by the model) **-seeking generalization power-**, getting the objetive of the fitness function. At the same time, we calculate the number of gates penalizing doubly the entangling operators due to a higher computational cost. We calculate a metric -Weight Control- in order to find a **balance between both metrics**, the accuracy and the reduction of number of gates. It is important since a high weight on the reducing circuit size objetive can lead less accuracy because of information loss.
-* **Step 4**: We select the best individuals. We apply **genetic operators** of crossover (Two-points) and mutation (Flipbit), generating new individuals (offspring) for the next generation. These operators are applied with a probability *Pm* and *Pc* respectively. The mutation operator allows us to reach other points in the search space since it allows us to **avoid local minima**, making the search for the best solution more efficient.
-* **Step 5**: The process is repeated until convergence or when stop conditions are achieved. **The best individuals are kept in the Pareto front**.
-* 
 ## 6. Results: Pareto Front and Best Quantum Circuit
 
 ## 7. Files Description and User Guide
