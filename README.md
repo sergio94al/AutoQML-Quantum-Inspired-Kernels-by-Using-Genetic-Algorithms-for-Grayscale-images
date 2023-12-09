@@ -77,4 +77,5 @@ In this figure, the genetic code used for generating quantum circuits through ga
 
 ## 6. References
 [1] https://github.com/sergio94al/Automatic_design_of_quantum_feature_maps_Genetic_Auto-Generation
+[2] https://iopscience.iop.org/article/10.1088/2058-9565/ac1ab1
 
