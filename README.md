@@ -45,14 +45,18 @@ In our strategy for applying this technique to grayscale images, we integrate a 
   <img src="https://github.com/sergio94al/AutoQML-Quantum-Inspired-Kernels-by-Using-Genetic-Algorithms-for-Grayscale-images/blob/main/genetic code.png" width="300" height="350">
 </p>
 
+In this figure, the genetic code used for generating quantum circuits through gates and rotation angles is depicted. It is essential to take into account that circuits are constructed sequentially, layer by layer. The first gate is placed on the first qubit in the first layer, the second gate on the second qubit of the first layer, and so forth, until reaching the predetermined maximum number of qubits (M). At that point, the process restarts with the first qubit of the second layer. This sequence continues until the entire binary string of the individual is completed.
+
+
+
 ## 3. Multi-Objective Genetic Algorithms (MO-GA)
 
 ## 4. Fitness Function
 
 
-### 5. Quantum Circuits Optimization Algorithm
+## 5. Quantum Circuits Optimization Algorithm
 
-* **Step 1**: Firstly, quantum gates H, CNOT and parameterized in the X,Y,Z axes with four associated angles are pre-coded to binary code. Each gate is coded into five bits, being the first three bits for gate selection and the last two bits for angle if necessary. During the process, binary strings (individuals) are created, which will encode for a specific ansatz.
+* **Step 1**: Firstly, quantum gates H, CNOT and parameterized in the X,Y,Z axes with four associated angles are pre-coded to binary code. Each gate is coded into seven bits, being the first three bits for gate selection and the last four bits for angle if necessary. During the process, binary strings (individuals) are created, which will encode for a specific ansatz.
 * **Step 2**: A starting population is created -Initial population.
 * **Step 3**: These individuals are evaluated in the **evaluation function or *fitness***. The output of this function will determine whether the individual is accurate for the given problem or not. In the proposed technique, the **binary strings are converted into quantum circuits** which will act as feature maps into QSVM. Firstly, the classifier is fitted with training set and then we make predictions over test set (data not previously seen by the model) **-seeking generalization power-**, getting the objetive of the fitness function. At the same time, we calculate the number of gates penalizing doubly the entangling operators due to a higher computational cost. We calculate a metric -Weight Control- in order to find a **balance between both metrics**, the accuracy and the reduction of number of gates. It is important since a high weight on the reducing circuit size objetive can lead less accuracy because of information loss.
 * **Step 4**: We select the best individuals. We apply **genetic operators** of crossover (Two-points) and mutation (Flipbit), generating new individuals (offspring) for the next generation. These operators are applied with a probability *Pm* and *Pc* respectively. The mutation operator allows us to reach other points in the search space since it allows us to **avoid local minima**, making the search for the best solution more efficient.
