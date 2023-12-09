@@ -31,16 +31,20 @@ The goal of the technique is to achieve the quantum circuit that provides the **
 
 Taking into account the ansatz size, our goal is to minimize it as much as possible in order to have solutions that avoid expressivity problems. This is possible because we code identity gates, which allows the **possibility of eliminating gates, layers and even reduce the number of qubits in the circuits**.
 
-### 2.1 Quantum Circuits Optimization Algorithm
 
-* **Step 1**: Firstly, quantum gates H, CNOT and parameterized in the X,Y,Z axes with four associated angles are pre-coded to binary code. Each gate is coded into five bits, being the first three bits for gate selection and the last two bits for angle if necessary. During the process, binary strings (individuals) are created, which will encode for a specific ansatz.
-* **Step 2**: A starting population is created -Initial population.
-* **Step 3**: These individuals are evaluated in the **evaluation function or *fitness***. The output of this function will determine whether the individual is accurate for the given problem or not. In the proposed technique, the **binary strings are converted into quantum circuits** which will act as feature maps into QSVM. Firstly, the classifier is fitted with training set and then we make predictions over test set (data not previously seen by the model) **-seeking generalization power-**, getting the objetive of the fitness function. At the same time, we calculate the number of gates penalizing doubly the entangling operators due to a higher computational cost. We calculate a metric -Weight Control- in order to find a **balance between both metrics**, the accuracy and the reduction of number of gates. It is important since a high weight on the reducing circuit size objetive can lead less accuracy because of information loss.
-* **Step 4**: We select the best individuals. We apply **genetic operators** of crossover (Two-points) and mutation (Flipbit), generating new individuals (offspring) for the next generation. These operators are applied with a probability *Pm* and *Pc* respectively. The mutation operator allows us to reach other points in the search space since it allows us to **avoid local minima**, making the search for the best solution more efficient.
-* **Step 5**: The process is repeated until convergence or when stop conditions are achieved. **The best individuals are kept in the Pareto front**.
+## 2. Quantum circuits Encoding
+Quantum circuits are encoded in binary strings, with each binary string composed of MxNx7 bits, where M and N represent the user-defined number of qubits and layers. The string is divided into groups of seven, where each group defines a quantum gate. The first three bits in each group specify the gate type, while the last four bits determine the rotation angles. Consequently, there are $2^3$ possible gates and $2^4$ rotation angles in this encoding scheme, improving our last encoding [1].
 
-## Quantum circuits Encoding
-Quantum circuits are encoded in binary strings, with each binary string composed of MxNx7 bits, where M and N represent the user-defined number of qubits and layers. The string is divided into groups of 7, where each group defines a quantum gate. The first 3 bits in each group specify the gate type, while the last 4 bits determine the rotation angles. Consequently, there are 2^3 possible gates and 2^4 rotation angles in this encoding scheme, improving our last encoding [1].
+In this encoding, not only gates with embedded variables are encoded and used, but also gates with fixed rotations are encoded to provide greater flexibility in classifier generation. Additionally, entanglement gates between two consecutive qubits and identity operators, which do not alter quantum states and thus allow for the reduction of circuit complexities, are also encoded.
+
+
+
+
+
+
+
+
+
 
 [1] https://github.com/sergio94al/Automatic_design_of_quantum_feature_maps_Genetic_Auto-Generation
 
@@ -50,6 +54,16 @@ Quantum circuits are encoded in binary strings, with each binary string composed
 
 
 
+
+
+
+### 2.1 Quantum Circuits Optimization Algorithm
+
+* **Step 1**: Firstly, quantum gates H, CNOT and parameterized in the X,Y,Z axes with four associated angles are pre-coded to binary code. Each gate is coded into five bits, being the first three bits for gate selection and the last two bits for angle if necessary. During the process, binary strings (individuals) are created, which will encode for a specific ansatz.
+* **Step 2**: A starting population is created -Initial population.
+* **Step 3**: These individuals are evaluated in the **evaluation function or *fitness***. The output of this function will determine whether the individual is accurate for the given problem or not. In the proposed technique, the **binary strings are converted into quantum circuits** which will act as feature maps into QSVM. Firstly, the classifier is fitted with training set and then we make predictions over test set (data not previously seen by the model) **-seeking generalization power-**, getting the objetive of the fitness function. At the same time, we calculate the number of gates penalizing doubly the entangling operators due to a higher computational cost. We calculate a metric -Weight Control- in order to find a **balance between both metrics**, the accuracy and the reduction of number of gates. It is important since a high weight on the reducing circuit size objetive can lead less accuracy because of information loss.
+* **Step 4**: We select the best individuals. We apply **genetic operators** of crossover (Two-points) and mutation (Flipbit), generating new individuals (offspring) for the next generation. These operators are applied with a probability *Pm* and *Pc* respectively. The mutation operator allows us to reach other points in the search space since it allows us to **avoid local minima**, making the search for the best solution more efficient.
+* **Step 5**: The process is repeated until convergence or when stop conditions are achieved. **The best individuals are kept in the Pareto front**.
 
 ## Multi-Objective Genetic Algorithms (MO-GA)
 
