@@ -61,7 +61,7 @@ The fitness function plays a crucial role in assessing how well an individual pe
 We have defined two dimensionality reduction methods. One embeds the method directly into the individual for optimization, while the other utilizes a trained model to reduce the data's dimensionality to 64 features in the latent space, employing a small Convolutional AutoEncoder.
 
 <p align="center">
-  <img src="https://github.com/sergio94al/AutoQML-Quantum-Inspired-Kernels-by-Using-Genetic-Algorithms-for-Grayscale-images/blob/main/fitness_function.png" width="600" height="400">
+  <img src="https://github.com/sergio94al/AutoQML-Quantum-Inspired-Kernels-by-Using-Genetic-Algorithms-for-Grayscale-images/blob/main/fitness_function.png" width="600" height="350">
 </p>
 
 ## 5. Quantum Circuits Optimization Algorithm
@@ -84,6 +84,4 @@ We have defined two dimensionality reduction methods. One embeds the method dire
 * encoding2.py: This file is used to visualize and obtain the solution after the evolution.
 
 ## 6. References
-[1] https://github.com/sergio94al/Automatic_design_of_quantum_feature_maps_Genetic_Auto-Generation //
-[2] https://iopscience.iop.org/article/10.1088/2058-9565/ac1ab1
-
+[1] https://github.com/sergio94al/Automatic_design_of_quantum_feature_maps_Genetic_Auto-Generation
