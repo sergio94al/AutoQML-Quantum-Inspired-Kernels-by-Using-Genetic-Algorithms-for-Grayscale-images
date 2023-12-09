@@ -58,6 +58,8 @@ In this figure, the genetic code used for generating quantum circuits through ga
 #### 3.1. Fitness Function
 The fitness function plays a crucial role in assessing how well an individual performs for the given problem. The objectives we have defined to evaluate classifiers include accuracy on unseen data (test data) during model training, aiming for greater model generalization, and circuit complexity, determined by the number and intricacy of gates.
 
+We have defined two dimensionality reduction methods. One embeds the method directly into the individual for optimization, while the other utilizes a trained model to reduce the data's dimensionality to 64 features in the latent space, employing a small Convolutional AutoEncoder.
+
 <p align="center">
   <img src="https://github.com/sergio94al/AutoQML-Quantum-Inspired-Kernels-by-Using-Genetic-Algorithms-for-Grayscale-images/blob/main/fitness_function.png" width="600" height="400">
 </p>
