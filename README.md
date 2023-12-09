@@ -33,13 +33,13 @@ Taking into account the ansatz size, our goal is to minimize it as much as possi
 
 
 ## 2. Quantum circuits Encoding
-Quantum circuits are encoded in binary strings, with each binary string composed of MxNx7 bits, where M and N represent the user-defined number of qubits and layers. The string is divided into groups of seven, where each group defines a quantum gate. The first three bits in each group specify the gate type, while the last four bits determine the rotation angles. Consequently, there are $2^3$ possible gates and $2^4$ rotation angles in this encoding scheme, improving our last encoding [1].
+Quantum circuits are encoded in binary strings, with each binary string composed of MxNx7 bits, where M and N represent the user-defined number of qubits and layers. The string is divided into groups of seven, where each group defines a quantum gate. The first three bits in each group specify the gate type, while the last four bits determine the rotation angles. Consequently, there are $2^3$ possible gates and $2^4$ rotation angles in this encoding scheme, improving our last encoding [1]. In this encoding, not only gates with embedded variables are encoded and used, but also gates with fixed rotations are encoded to provide greater flexibility in classifier generation. Additionally, entanglement gates between two consecutive qubits and identity operators, which do not alter quantum states and thus allow for the reduction of circuit complexities, are also encoded.
 
 <p align="center">
   <img src="https://github.com/sergio94al/AutoQML-Quantum-Inspired-Kernels-by-Using-Genetic-Algorithms-for-Grayscale-images/blob/main/codes_2.png" width="750" height="350">
 </p>
 
-In this encoding, not only gates with embedded variables are encoded and used, but also gates with fixed rotations are encoded to provide greater flexibility in classifier generation. Additionally, entanglement gates between two consecutive qubits and identity operators, which do not alter quantum states and thus allow for the reduction of circuit complexities, are also encoded.
+In our strategy for applying this technique to grayscale images, we integrate a dimensionality reduction method directly into the individual, employing Principal Component Analysis (PCA). Thus, while the quantum circuit is constructed as a binary string of MxNx7, in this instance, we extend the string length to (MxNx7)+7 bits. Within these additional seven bits, the initial six are used to determine the number of PCA components by converting the binary string into an integer, with a range spanning from 0 to 64 features.
 
 <p align="center">
   <img src="https://github.com/sergio94al/AutoQML-Quantum-Inspired-Kernels-by-Using-Genetic-Algorithms-for-Grayscale-images/blob/main/genetic code.png" width="300" height="350">
