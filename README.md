@@ -39,6 +39,20 @@ Taking into account the ansatz size, our goal is to minimize it as much as possi
 * **Step 4**: We select the best individuals. We apply **genetic operators** of crossover (Two-points) and mutation (Flipbit), generating new individuals (offspring) for the next generation. These operators are applied with a probability *Pm* and *Pc* respectively. The mutation operator allows us to reach other points in the search space since it allows us to **avoid local minima**, making the search for the best solution more efficient.
 * **Step 5**: The process is repeated until convergence or when stop conditions are achieved. **The best individuals are kept in the Pareto front**.
 
+## Quantum circuits Encoding
+Quantum circuits are encoded in binary strings, with each binary string composed of MxNx7 bits, where M and N represent the user-defined number of qubits and layers. The string is divided into groups of 7, where each group defines a quantum gate. The first 3 bits in each group specify the gate type, while the last 4 bits determine the rotation angles. Consequently, there are 2^3 possible gates and 2^4 rotation angles in this encoding scheme, improving our last encoding [1].
+
+[1] https://github.com/sergio94al/Automatic_design_of_quantum_feature_maps_Genetic_Auto-Generation
+
+
+
+
+
+
+
+
+## Multi-Objective Genetic Algorithms (MO-GA)
+
 ## 5. Files Description
 
 * circuit.py: We create the quantum operators that will composed the quantum circuit.
