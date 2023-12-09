@@ -53,12 +53,18 @@ In this figure, the genetic code used for generating quantum circuits through ga
 
 ## 3. Multi-Objective Genetic Algorithms (MO-GA)
 
-## 4. Fitness Function
 
+
+#### 3.1. Fitness Function
+The fitness function plays a crucial role in assessing how well an individual performs for the given problem. The objectives we have defined to evaluate classifiers include accuracy on unseen data (test data) during model training, aiming for greater model generalization, and circuit complexity, determined by the number and intricacy of gates.
+
+<p align="center">
+  <img src="https://github.com/sergio94al/AutoQML-Quantum-Inspired-Kernels-by-Using-Genetic-Algorithms-for-Grayscale-images/blob/main/genetic code.png" width="300" height="350">
+</p>
 
 ## 5. Quantum Circuits Optimization Algorithm
 
-* **Step 1**: Firstly, quantum gates H, CNOT and parameterized in the X,Y,Z axes with four associated angles are pre-coded to binary code. Each gate is coded into seven bits, being the first three bits for gate selection and the last four bits for angle if necessary. During the process, binary strings (individuals) are created, which will encode for a specific ansatz.
+* **Step 1**: Firstly, quantum gates CNOT and parameterized in the X,Y,Z,I axes with four associated angles are pre-coded to binary code. Each gate is coded into seven bits, being the first three bits for gate selection and the last four bits for angle if necessary. During the process, binary strings (individuals) are created, which will encode for a specific ansatz.
 * **Step 2**: A starting population is created -Initial population.
 * **Step 3**: These individuals are evaluated in the **evaluation function or *fitness***. The output of this function will determine whether the individual is accurate for the given problem or not. In the proposed technique, the **binary strings are converted into quantum circuits** which will act as feature maps into QSVM. Firstly, the classifier is fitted with training set and then we make predictions over test set (data not previously seen by the model) **-seeking generalization power-**, getting the objetive of the fitness function. At the same time, we calculate the number of gates penalizing doubly the entangling operators due to a higher computational cost. We calculate a metric -Weight Control- in order to find a **balance between both metrics**, the accuracy and the reduction of number of gates. It is important since a high weight on the reducing circuit size objetive can lead less accuracy because of information loss.
 * **Step 4**: We select the best individuals. We apply **genetic operators** of crossover (Two-points) and mutation (Flipbit), generating new individuals (offspring) for the next generation. These operators are applied with a probability *Pm* and *Pc* respectively. The mutation operator allows us to reach other points in the search space since it allows us to **avoid local minima**, making the search for the best solution more efficient.
