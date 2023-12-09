@@ -67,7 +67,8 @@ We have defined two dimensionality reduction methods. One embeds the method dire
 
 #### 3.2.1 PCA Approach
 One of the proposed approaches is PCA. In this case, the first six bits of the individual are taken and used to determine the number of components. This number, after apply the transformations is the number of variables to be embedded in the rotation operators of the circuit. As it has been commented, the maximum individual size is calculated as M × N × 7. In this approach, seven more bits are added to the individual to be used as the number of components in order to maintain the same chain size of the quantum circuit. In this case, the string length is calculated as M × N × 7 + 7. The first six bits are used only to ensure a fair comparison with the other approximation methods, leaving the bit number seven of the individual unused. However, more bits could be used in this dimensionality reduction method encoding. The number of features is limited to 6 bits, resulting in a maximum of 64 dimensions, as $2^6$.
-##### STEPS
+
+##### Steps
 * The circuit's maximum size is defined based on the number of qubits (M) and layers (N). The individual's encoding includes seven bits for the number of components (M×N×7+7). Since we limit components to 64, the first six bits are utilized, maintaining the structure of the quantum circuit M×N×7 for fair comparison.
 
 * The individual enters the fitness function, separating the circuit (M×N×7) and number of components (7 bits). The first six bits are converted to an integer, representing the number of components for the PCA method.
@@ -76,9 +77,25 @@ One of the proposed approaches is PCA. In this case, the first six bits of the i
 
 * Once trained, predictions are made on the test set, and the quantum circuit complexity is calculated. These metrics are objectives of the genetic algorithm. Optimal individuals are stored in the Pareto front, and genetic operators create the next generation.
 
-*Iterate from Step 2 until the algorithm converges or meets the genetic algorithm's stop conditions.
+* Iterate from Step 2 until the algorithm converges or meets the genetic algorithm's stop conditions.
 
 #### 3.2.1 CAE Approach
+In the CAE approach, a small convolutional autoencoder neural network is pretrained to perform 64-dimensional extraction, which is equivalent to six bits. This method can be considered to be a form of *transfer learning*. In the CAE approach, we apply the encoding part of the network to the input data, obtaining the latent space in 64 dimensions. In this case, the whole individual corresponds to the quantum circuit, it means, M×N×7.
+
+##### Steps
+* A small Convolutional AutoEncoder (CAE) neural network is implemented to extract information. The encoding part of the network, with an output of 64 dimensions, is utilized for application.
+
+* The maximum circuit size is determined based on the number of input qubits (M) and layers (N) with the expression M×N×7.
+
+* The dataset is split into training and test sets, standardized, and the pretrained CAE model is applied to obtain 64 fixed dimensions as input variables for the quantum circuit. This process prevents data leakage effects.
+
+* The individual enters the fitness function, is decoded, and generates a quantum feature map embedding CAE's output dimensions in the quantum gates. The Quantum Support Vector Machine (QSVM) is trained exclusively with the decoded quantum circuit using the training set.
+
+* After training, the model is applied to the test set, making predictions and calculating accuracy. Simultaneously, the complexity of the quantum circuit is assessed. Both metrics are objectives of the genetic algorithm. Individuals improving both objectives or one without worsening the other, compared to those in the Pareto front, are stored in the Pareto front for that generation.
+
+* Genetic operators are applied to create the next generation.
+
+* Iterate the processes starting from Step 4 until the algorithm converges or the defined stop conditions are reached, obtaining the Pareto front.
 
 ## 5. Quantum Circuits Optimization Algorithm
 
