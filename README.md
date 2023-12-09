@@ -66,6 +66,17 @@ We have defined two dimensionality reduction methods. One embeds the method dire
 </p>
 
 #### 3.2.1 PCA Approach
+One of the proposed approaches is PCA. In this case, the first six bits of the individual are taken and used to determine the number of components. This number, after apply the transformations is the number of variables to be embedded in the rotation operators of the circuit. As it has been commented, the maximum individual size is calculated as M × N × 7. In this approach, seven more bits are added to the individual to be used as the number of components in order to maintain the same chain size of the quantum circuit. In this case, the string length is calculated as M × N × 7 + 7. The first six bits are used only to ensure a fair comparison with the other approximation methods, leaving the bit number seven of the individual unused. However, more bits could be used in this dimensionality reduction method encoding. The number of features is limited to 6 bits, resulting in a maximum of 64 dimensions, as $2^6$.
+##### STEPS
+* The circuit's maximum size is defined based on the number of qubits (M) and layers (N). The individual's encoding includes seven bits for the number of components (M×N×7+7). Since we limit components to 64, the first six bits are utilized, maintaining the structure of the quantum circuit M×N×7 for fair comparison.
+
+* The individual enters the fitness function, separating the circuit (M×N×7) and number of components (7 bits). The first six bits are converted to an integer, representing the number of components for the PCA method.
+
+* The dataset is split into training and test sets, standardized, and the PCA transformation is applied with the individual's specified number of components. A death penalty is applied if components are zero or one. The individual is decoded to embed PCA features in quantum rotations, and the QSVM is trained only on the training set.
+
+* Once trained, predictions are made on the test set, and the quantum circuit complexity is calculated. These metrics are objectives of the genetic algorithm. Optimal individuals are stored in the Pareto front, and genetic operators create the next generation.
+
+*Iterate from Step 2 until the algorithm converges or meets the genetic algorithm's stop conditions.
 
 #### 3.2.1 CAE Approach
 
