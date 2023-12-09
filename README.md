@@ -47,7 +47,7 @@ In our strategy for applying this technique to grayscale images, we integrate a 
   <img src="https://github.com/sergio94al/AutoQML-Quantum-Inspired-Kernels-by-Using-Genetic-Algorithms-for-Grayscale-images/blob/main/genetic code.png" width="300" height="350">
 </p>
 
-In this figure, the genetic code used for generating quantum circuits through gates and rotation angles is depicted. It is essential to take into account that circuits are constructed sequentially, layer by layer. The first gate is placed on the first qubit in the first layer, the second gate on the second qubit of the first layer, and so forth, until reaching the predetermined maximum number of qubits (M). At that point, the process restarts with the first qubit of the second layer. This sequence continues until the entire binary string of the individual is completed.
+In this figure, the genetic code used for generating quantum circuits through gates and rotation angles is depicted. It is essential to take into account that **circuits are constructed sequentially, layer by layer**. The first gate is placed on the first qubit in the first layer, the second gate on the second qubit of the first layer, and so forth, until reaching the predetermined maximum number of qubits (M). At that point, the process restarts with the first qubit of the second layer. This sequence continues until the entire binary string of the individual is completed.
 
 
 
