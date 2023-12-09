@@ -45,37 +45,22 @@ In our strategy for applying this technique to grayscale images, we integrate a 
   <img src="https://github.com/sergio94al/AutoQML-Quantum-Inspired-Kernels-by-Using-Genetic-Algorithms-for-Grayscale-images/blob/main/genetic code.png" width="300" height="350">
 </p>
 
+## 3. Multi-Objective Genetic Algorithms (MO-GA)
+
+## 4. Fitness Function
 
 
-
-
-
-
-
-
-
-[1] https://github.com/sergio94al/Automatic_design_of_quantum_feature_maps_Genetic_Auto-Generation
-
-
-
-
-
-
-
-
-
-
-### 2.1 Quantum Circuits Optimization Algorithm
+### 5. Quantum Circuits Optimization Algorithm
 
 * **Step 1**: Firstly, quantum gates H, CNOT and parameterized in the X,Y,Z axes with four associated angles are pre-coded to binary code. Each gate is coded into five bits, being the first three bits for gate selection and the last two bits for angle if necessary. During the process, binary strings (individuals) are created, which will encode for a specific ansatz.
 * **Step 2**: A starting population is created -Initial population.
 * **Step 3**: These individuals are evaluated in the **evaluation function or *fitness***. The output of this function will determine whether the individual is accurate for the given problem or not. In the proposed technique, the **binary strings are converted into quantum circuits** which will act as feature maps into QSVM. Firstly, the classifier is fitted with training set and then we make predictions over test set (data not previously seen by the model) **-seeking generalization power-**, getting the objetive of the fitness function. At the same time, we calculate the number of gates penalizing doubly the entangling operators due to a higher computational cost. We calculate a metric -Weight Control- in order to find a **balance between both metrics**, the accuracy and the reduction of number of gates. It is important since a high weight on the reducing circuit size objetive can lead less accuracy because of information loss.
 * **Step 4**: We select the best individuals. We apply **genetic operators** of crossover (Two-points) and mutation (Flipbit), generating new individuals (offspring) for the next generation. These operators are applied with a probability *Pm* and *Pc* respectively. The mutation operator allows us to reach other points in the search space since it allows us to **avoid local minima**, making the search for the best solution more efficient.
 * **Step 5**: The process is repeated until convergence or when stop conditions are achieved. **The best individuals are kept in the Pareto front**.
+* 
+## 6. Results: Pareto Front and Best Quantum Circuit
 
-## Multi-Objective Genetic Algorithms (MO-GA)
-
-## 5. Files Description
+## 7. Files Description and User Guide
 
 * circuit.py: We create the quantum operators that will composed the quantum circuit.
 * fitness.py: Evaluation fuction of the genetic algorithm (we fit 2 variables to return -the objetives)
@@ -83,3 +68,7 @@ In our strategy for applying this technique to grayscale images, we integrate a 
 * qsvm.py: We create a simulated quantum support vector machine by using sklearn.
 * encoding.py: In this file we create the encoding of the quantum gates and the parameters *θ*.
 * encoding2.py: This file is used to visualize and obtain the solution after the evolution.
+
+## 6. References
+[1] https://github.com/sergio94al/Automatic_design_of_quantum_feature_maps_Genetic_Auto-Generation
+
