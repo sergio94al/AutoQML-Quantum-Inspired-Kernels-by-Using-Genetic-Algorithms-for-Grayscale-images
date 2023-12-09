@@ -53,7 +53,7 @@ In this figure, the genetic code used for generating quantum circuits through ga
 
 ## 3. Multi-Objective Genetic Algorithms (MO-GA)
 
-#### 3.1. NSGA-II
+### 3.1. NSGA-II and Genetic Operators
 
 
 ### 3.2. Fitness Function
