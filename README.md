@@ -15,19 +15,19 @@ methods are compared with one another and with a classical nonlinear approach to
 
 * **Maximize the accuracy on unseen data**.
 * **Minimize the quantum classifier size**, in terms of quantum gates, layers and number of qubits, thus, reducing the expressivity of the quantum circuits.
-* **Optimization of the circuit structure, gate types and its parameters *θ***.
+* **Generation of circuit structure, gate types and its parameters *θ***.
 * Generate an **automatic and optimized system for data encoding** of classical information into the quantum feature maps.
 * Take into account the use case, generating **ad-hoc classifiers for each data set**.
-* **PCA components optimization** in the genetic algorithm.
+* **PCA components optimization** within the individuals of the genetic algorithm.
 * Application of **quantum circuits on high dimensionality** data such as images.
 * Search of **quantum-inspired solutions** that can be implemented on classical computers.
 * Capacity to include **many variables in few qubits**.
 
 # 1. Quantum Circuits Generation
 
-In this paper we propose a novel technique for **quantum machine learning** (QML) which allows for grayscale-image datasets the **automatic generation of quantum-inspired kernels for classification** by using Quantum Support Vector Machine (QSVM), based on Multi-Objective Genetic Algorithms (MO-GA).
+In this paper we propose a novel technique for **quantum machine learning** (QML) which allows the **automatic generation of quantum-inspired kernels for classification** by using Quantum Support Vector Machine (QSVM), based on Multi-Objective Genetic Algorithms (MO-GA) for **grayscale-image datasets**.
 
-The goal of the technique is to achieve the quantum circuit that provides the **best accuracy** on test data, as well as the **smallest ansatz size**. Since the objective of the fitness function is the test accuracy, we force the circuits-solution to be robust and to **avoid overfitting effects, being quantum classifiers with a high generalization power**. 
+The goal of the technique is to achieve the quantum circuit that provides the **best accuracy on test data**, as well as the **smallest ansatz size**, without compromising precision. Since the objective of the fitness function is the test accuracy, we force the circuits-solution to be robust and to **avoid overfitting effects, being quantum classifiers with a high generalization power**. 
 
 Taking into account the ansatz size, our goal is to minimize it as much as possible in order to have solutions that avoid expressivity problems. This is possible because we code identity gates, which allows the **possibility of eliminating gates, layers and even reduce the number of qubits in the circuits**.
 
@@ -49,7 +49,7 @@ Taking into account the ansatz size, our goal is to minimize it as much as possi
 * **Step 5**: The process is repeated until convergence or when stop conditions are achieved. **The best individuals are kept in the Pareto front**.
 
 * <p align="center">
-    <img src="https://github.com/sergio94al/AutoQML-Quantum-Inspired-Kernels-by-Using-Genetic-Algorithms-for-Grayscale-images/blob/main/datasets_grayscale_.png" width="200" height="250">
+    <img src="https://github.com/sergio94al/AutoQML-Quantum-Inspired-Kernels-by-Using-Genetic-Algorithms-for-Grayscale-images/blob/main/datasets_grayscale_.png" width="200" height="100">
 </p>
 
 ## 5. Files Description
