@@ -44,7 +44,7 @@ Quantum circuits are encoded in binary strings, with each binary string composed
 In our strategy for applying this technique to grayscale images, we integrate a dimensionality reduction method directly into the individual, employing Principal Component Analysis (PCA). Thus, while the quantum circuit is constructed as a binary string of MxNx7, in this instance, we extend the string length to (MxNx7)+7 bits. Within these additional seven bits, the initial six are used to determine the number of PCA components by converting the binary string into an integer, with a range spanning from 0 to 64 features.
 
 <p align="center">
-  <img src="https://github.com/sergio94al/AutoQML-Quantum-Inspired-Kernels-by-Using-Genetic-Algorithms-for-Grayscale-images/blob/main/genetic code.png" width="300" height="350">
+  <img src="https://github.com/sergio94al/AutoQML-Quantum-Inspired-Kernels-by-Using-Genetic-Algorithms-for-Grayscale-images/blob/main/images/genetic code.png" width="300" height="350">
 </p>
 
 In this figure, the genetic code used for generating quantum circuits through gates and rotation angles is depicted. It is essential to take into account that **circuits are constructed sequentially, layer by layer**. The first gate is placed on the first qubit in the first layer, the second gate on the second qubit of the first layer, and so forth, until reaching the predetermined maximum number of qubits (M). At that point, the process restarts with the first qubit of the second layer. This sequence continues until the entire binary string of the individual is completed.
