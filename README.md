@@ -110,6 +110,9 @@ In the CAE approach, a small convolutional autoencoder neural network is pretrai
 ## 6. References
 * [1] https://github.com/sergio94al/Automatic_design_of_quantum_feature_maps_Genetic_Auto-Generation
 * [2] Altares-López, S., Ribeiro, A., & García-Ripoll, J. J. (2021). Automatic design of quantum feature maps. Quantum Science and Technology, 6(4), 045015. (https://iopscience.iop.org/article/10.1088/2058-9565/ac1ab1)
+* [3] Fortin, F. A., De Rainville, F. M., Gardner, M. A. G., Parizeau, M., & Gagné, C. (2012). DEAP: Evolutionary algorithms made easy. The Journal of Machine Learning Research, 13(1), 2171-2175.
+* [4] Deb, K., Pratap, A., Agarwal, S., & Meyarivan, T. A. M. T. (2002). A fast and elitist multiobjective genetic algorithm: NSGA-II. IEEE transactions on evolutionary computation, 6(2), 182-197.
+* [5] Sklearn. Support Vector Machine. https://scikit-learn.org/stable/modules/svm.html
 ## 7. Public Datasets
-* [3] N. Chakrabarty, Brain dataset, https://www.kaggle.com/navoneel/brain-mri-images-for-brain-tumor-detection/metadata (April 2019).
-* [4] P. Raikote, Covid-19 dataset, https://www.kaggle.com/pranavraikokte/covid19-image-dataset/metadata (2020).
+* [1] N. Chakrabarty, Brain dataset, https://www.kaggle.com/navoneel/brain-mri-images-for-brain-tumor-detection/metadata (April 2019).
+* [2] P. Raikote, Covid-19 dataset, https://www.kaggle.com/pranavraikokte/covid19-image-dataset/metadata (2020).
