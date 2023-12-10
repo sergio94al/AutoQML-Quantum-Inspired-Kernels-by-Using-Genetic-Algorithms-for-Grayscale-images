@@ -109,7 +109,8 @@ In the CAE approach, a small convolutional autoencoder neural network is pretrai
 * qsvm.py: We create a simulated quantum support vector machine by using sklearn.
 * encoding.py: In this file we create the encoding of the quantum gates and the parameters *θ*.
 * encoding2.py: This file is used to visualize and obtain the solution after the evolution.
-
+* Visualizing.ipynb: Execute this file to generate a quantum circuit from the designated folder of pickles. Ensure that you select the one with the highest accuracy and minimal complexity, as indicated in the file name.
+* QSVM_Name.ipynb: Execute this file to run the implementation of the genetic algorithm, which generates optimal quantum circuits by calling the corresponding .py files. Users can customize parameters based on their specific requirements.
 ## 6. References
 * [1] https://github.com/sergio94al/Automatic_design_of_quantum_feature_maps_Genetic_Auto-Generation
 * [2] Altares-López, S., Ribeiro, A., & García-Ripoll, J. J. (2021). Automatic design of quantum feature maps. Quantum Science and Technology, 6(4), 045015. (https://iopscience.iop.org/article/10.1088/2058-9565/ac1ab1)
