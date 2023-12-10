@@ -38,7 +38,7 @@ Taking into account the ansatz size, our goal is to minimize it as much as possi
 Quantum circuits are encoded in binary strings, with each binary string composed of MxNx7 bits, where M and N represent the user-defined number of qubits and layers. The string is divided into groups of seven, where each group defines a quantum gate. The first three bits in each group specify the gate type, while the last four bits determine the rotation angles. Consequently, there are $2^3$ possible gates and $2^4$ rotation angles in this encoding scheme, improving our last encoding [1,2]. In this encoding, not only gates with embedded variables are encoded and used, but also gates with fixed rotations are encoded to provide greater flexibility in classifier generation. Additionally, entanglement gates between two consecutive qubits and identity operators, which do not alter quantum states and thus allow for the reduction of circuit complexities, are also encoded.
 
 <p align="center">
-  <img src="https://github.com/sergio94al/AutoQML-Quantum-Inspired-Kernels-by-Using-Genetic-Algorithms-for-Grayscale-images/blob/main/codes_2.png" width="750" height="350">
+  <img src="https://github.com/sergio94al/AutoQML-Quantum-Inspired-Kernels-by-Using-Genetic-Algorithms-for-Grayscale-images/blob/main/images/codes_2.png" width="750" height="350">
 </p>
 
 In our strategy for applying this technique to grayscale images, we integrate a dimensionality reduction method directly into the individual, employing Principal Component Analysis (PCA). Thus, while the quantum circuit is constructed as a binary string of MxNx7, in this instance, we extend the string length to (MxNx7)+7 bits. Within these additional seven bits, the initial six are used to determine the number of PCA components by converting the binary string into an integer, with a range spanning from 0 to 64 features.
@@ -62,7 +62,7 @@ The fitness function plays a crucial role in assessing how well an individual pe
 We have defined two dimensionality reduction methods. One embeds the method directly into the individual for optimization, while the other utilizes a trained model to reduce the data's dimensionality to 64 features in the latent space, employing a small Convolutional AutoEncoder.
 
 <p align="center">
-  <img src="https://github.com/sergio94al/AutoQML-Quantum-Inspired-Kernels-by-Using-Genetic-Algorithms-for-Grayscale-images/blob/main/fitness_function.png" width="600" height="350">
+  <img src="https://github.com/sergio94al/AutoQML-Quantum-Inspired-Kernels-by-Using-Genetic-Algorithms-for-Grayscale-images/blob/main/images/fitness_function.png" width="600" height="350">
 </p>
 
 Individuals are evaluated in the **evaluation function or *fitness***. The output of this function will determine whether the individual is accurate for the given problem or not. In the proposed technique, the **binary strings are converted into quantum circuits** which will act as feature maps into QSVM. Firstly, the classifier is fitted with training set and then we make predictions over test set (data not previously seen by the model) **-seeking generalization power-**, getting the objective of the fitness function. At the same time, we calculate the number of gates penalizing doubly the entangling operators due to a higher computational cost. We calculate a metric -Weight Control- in order to find a **balance between both metrics**, the accuracy and the reduction of number of gates. It is important since a high weight on the reducing circuit size objetive can lead less accuracy because of information loss.
