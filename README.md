@@ -61,6 +61,11 @@ In this figure, the genetic code used for generating quantum circuits through ga
 
 ### 3.1. NSGA-II and Genetic Operators
 
+A genetic algorithm is an optimization and search technique based on biological evolution. It is a stochastic process that employs genetic operators such as selection, crossover and mutation to explore and enhance solutions to a given problem. In this approach, the problem is modeled as a solution space, where each potential solution is represented as a chromosome —a string of genes.
+
+The process begins with the random creation of an initial population of potential solutions. Each individual in the population represents a potential solution to the problem, and its quality is evaluated using a fitness function that measures how good that solution is. Selection simulates the process of natural selection, where fitter individuals are more likely to reproduce and pass on their characteristics.
+
+Genetic operators include crossover, which combines the features of two individuals to produce new offspring, and mutation, which introduces random changes to an individual's genes. These operators help explore and diversify the solution space. The evolutionary process is repeated over several generations, and in each iteration, the population evolves toward more promising solutions. Elitism can be incorporated to preserve the best individuals from one generation to the next.
 
 ### 3.2. Fitness Function
 The fitness function plays a crucial role in assessing how well an individual performs for the given problem. The objectives we have defined to evaluate classifiers include accuracy on unseen data (test data) during model training, aiming for greater model generalization, and circuit complexity, determined by the number and intricacy of gates.
