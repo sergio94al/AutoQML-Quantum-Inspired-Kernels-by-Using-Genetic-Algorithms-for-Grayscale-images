@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/sergio94al/AutoQML-Quantum-Inspired-Kernels-by-Using-Genetic-Algorithms-for-Grayscale-images/blob/main/images/logo_2.png" width="500" height="300">
+    <img src="https://github.com/sergio94al/AutoQML-Quantum-Inspired-Kernels-by-Using-Genetic-Algorithms-for-Grayscale-images/blob/main/images/logo_2.png" width="400" height="300">
 </p>
 
 
