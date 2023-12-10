@@ -98,8 +98,6 @@ In the CAE approach, a small convolutional autoencoder neural network is pretrai
 ## 6. Results: Pareto Front and Best Quantum Circuit
 
 ## 7. How to Use the Code
-
-
 ### 7.1. Files Description
 
 * circuit.py: We create the quantum operators that will composed the quantum circuit.
