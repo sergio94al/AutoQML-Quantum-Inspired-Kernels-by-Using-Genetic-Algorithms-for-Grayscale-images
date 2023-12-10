@@ -40,7 +40,7 @@ We incorporate a dimensionality reduction method for images into the individuals
 Taking into account the ansatz size, our goal is to minimize it as much as possible in order to have solutions that avoid expressivity problems. This is possible because we code identity gates, which allows the **possibility of eliminating gates, layers and even reduce the number of qubits in the circuits**.
 
 
-## 2. Quantum circuits Encoding
+## 2. Quantum Circuits Encoding
 Quantum circuits are encoded in binary strings, with each binary string composed of MxNx7 bits, where M and N represent the user-defined number of qubits and layers. The string is divided into groups of seven, where each group defines a quantum gate. The first three bits in each group specify the gate type, while the last four bits determine the rotation angles. Consequently, there are $2^3$ possible gates and $2^4$ rotation angles in this encoding scheme, improving our last encoding [1,2]. In this encoding, not only gates with embedded variables are encoded and used, but also gates with fixed rotations are encoded to provide greater flexibility in classifier generation. Additionally, entanglement gates between two consecutive qubits and identity operators, which do not alter quantum states and thus allow for the reduction of circuit complexities, are also encoded.
 
 <p align="center">
@@ -78,13 +78,9 @@ One of the proposed approaches is PCA. In this case, the first six bits of the i
 
 ##### Steps
 * The circuit's maximum size is defined based on the number of qubits (M) and layers (N). The individual's encoding includes seven bits for the number of components (M×N×7+7). Since we limit components to 64, the first six bits are utilized, maintaining the structure of the quantum circuit M×N×7 for fair comparison.
-
 * The individual enters the fitness function, separating the circuit (M×N×7) and number of components (7 bits). The first six bits are converted to an integer, representing the number of components for the PCA method.
-
 * The dataset is split into training and test sets, standardized, and the PCA transformation is applied with the individual's specified number of components. A death penalty is applied if components are zero or one. The individual is decoded to embed PCA features in quantum rotations, and the QSVM is trained only on the training set.
-
 * Once trained, predictions are made on the test set, and the quantum circuit complexity is calculated. These metrics are objectives of the genetic algorithm. Optimal individuals are stored in the Pareto front, and genetic operators create the next generation.
-
 * Iterate from Step 2 until the algorithm converges or meets the genetic algorithm's stop conditions.
 
 #### 3.2.1 CAE Approach
@@ -92,17 +88,11 @@ In the CAE approach, a small convolutional autoencoder neural network is pretrai
 
 ##### Steps
 * A small Convolutional AutoEncoder (CAE) neural network is implemented to extract information. The encoding part of the network, with an output of 64 dimensions, is utilized for application.
-
 * The maximum circuit size is determined based on the number of input qubits (M) and layers (N) with the expression M×N×7.
-
 * The dataset is split into training and test sets, standardized, and the pretrained CAE model is applied to obtain 64 fixed dimensions as input variables for the quantum circuit. This process prevents data leakage effects.
-
 * The individual enters the fitness function, is decoded, and generates a quantum feature map embedding CAE's output dimensions in the quantum gates. The Quantum Support Vector Machine (QSVM) is trained exclusively with the decoded quantum circuit using the training set.
-
 * After training, the model is applied to the test set, making predictions and calculating accuracy. Simultaneously, the complexity of the quantum circuit is assessed. Both metrics are objectives of the genetic algorithm. Individuals improving both objectives or one without worsening the other, compared to those in the Pareto front, are stored in the Pareto front for that generation.
-
 * Genetic operators are applied to create the next generation.
-
 * Iterate the processes starting from Step 4 until the algorithm converges or the defined stop conditions are reached, obtaining the Pareto front.
 
 ## 6. Results: Pareto Front and Best Quantum Circuit
