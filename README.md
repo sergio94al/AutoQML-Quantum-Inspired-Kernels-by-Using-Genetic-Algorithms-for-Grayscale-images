@@ -95,10 +95,10 @@ In the CAE approach, a small convolutional autoencoder neural network is pretrai
 * Genetic operators are applied to create the next generation.
 * Iterate the processes starting from Step 4 until the algorithm converges or the defined stop conditions are reached, obtaining the Pareto front.
 
-## 6. Results: Pareto Front and Best Quantum Circuit
+## 4. Results: Pareto Front and Best Quantum Circuit
 
-## 7. How to Use the Code
-### 7.1. Files Description
+## 5. How to Use the Code
+### 5.1. Files Description
 
 * circuit.py: We create the quantum operators that will composed the quantum circuit.
 * fitness.py: Evaluation fuction of the genetic algorithm (we fit 2 variables to return -the objetives)
@@ -108,12 +108,12 @@ In the CAE approach, a small convolutional autoencoder neural network is pretrai
 * encoding2.py: This file is used to visualize and obtain the solution after the evolution.
 * Visualizing.ipynb: Execute this file to generate a quantum circuit from the designated folder of pickles. Ensure that you select the one with the highest accuracy and minimal complexity, as indicated in the file name.
 * QSVM_Name.ipynb: Execute this file to run the implementation of the genetic algorithm, which generates optimal quantum circuits by calling the corresponding .py files. Users can customize parameters based on their specific requirements.
-## 9. References
+## 6. References
 * [1] https://github.com/sergio94al/Automatic_design_of_quantum_feature_maps_Genetic_Auto-Generation
 * [2] Altares-López, S., Ribeiro, A., & García-Ripoll, J. J. (2021). Automatic design of quantum feature maps. Quantum Science and Technology, 6(4), 045015. (https://iopscience.iop.org/article/10.1088/2058-9565/ac1ab1)
 * [3] Fortin, F. A., De Rainville, F. M., Gardner, M. A. G., Parizeau, M., & Gagné, C. (2012). DEAP: Evolutionary algorithms made easy. The Journal of Machine Learning Research, 13(1), 2171-2175. (https://deap.readthedocs.io/en/master/index.html)
 * [4] Deb, K., Pratap, A., Agarwal, S., & Meyarivan, T. A. M. T. (2002). A fast and elitist multiobjective genetic algorithm: NSGA-II. IEEE transactions on evolutionary computation, 6(2), 182-197.
 * [5] Sklearn. Support Vector Machine. https://scikit-learn.org/stable/modules/svm.html
-## 10. Public Datasets
+## 7. Public Datasets
 * [1] N. Chakrabarty, Brain dataset, https://www.kaggle.com/navoneel/brain-mri-images-for-brain-tumor-detection/metadata (April 2019).
 * [2] P. Raikote, Covid-19 dataset, https://www.kaggle.com/pranavraikokte/covid19-image-dataset/metadata (2020).
