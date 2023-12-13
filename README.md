@@ -12,6 +12,18 @@ DOI: https://arxiv.org/abs/2208.13246
 
 *Sergio Altares-López, Juan José García-Ripoll, Angela Ribeiro (2023) AutoQML: Quantum Inspired Kernels by Using Genetic Algorithms for Grayscale Images. https://doi.org/10.24433/CO.3955535.v1*
 
+´´´xml
+@misc{d8c085c8-ea11-47ff-ab90-9715ffc2b39d,
+  title = {AutoQML: Quantum Inspired Kernels by Using Genetic Algorithms for Grayscale Images},
+  author = {Sergio Altares-López and Juan José García-Ripoll and Angela Ribeiro},
+   journal = {Expert Systems with Applications},
+  doi = {10.24433/CO.3955535.v1}, 
+  howpublished = {\url{https://www.codeocean.com/}},
+  year = 2023,
+  month = {11},
+  version = {v1}
+}
+´´´
 ### Abstract
 
 A new hybrid system is proposed for automatically generating and training quantum-inspired classifiers on grayscale images by using multiobjective genetic algorithms. It is defined a dynamic fitness function to obtain the smallest circuit complexity and highest accuracy on unseen data, ensuring that the proposed technique is generalizable and robust. At the same time, it is minimized the
