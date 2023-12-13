@@ -13,7 +13,7 @@ DOI: https://arxiv.org/abs/2208.13246
 The code for this work has been verified and published on the Code Ocean platform, where the Reproducibility Badge has been granted, indicating that it is functional. *Sergio Altares-López, Juan José García-Ripoll, Angela Ribeiro (2023) AutoQML: Quantum Inspired Kernels by Using Genetic Algorithms for Grayscale Images. https://doi.org/10.24433/CO.3955535.v1*
 
 <p align="center">
-    <img src="https://github.com/sergio94al/AutoQML-Quantum-Inspired-Kernels-by-Using-Genetic-Algorithms-for-Grayscale-images/blob/main/images/badge_CO.png" width="400" height="50">
+    <img src="https://github.com/sergio94al/AutoQML-Quantum-Inspired-Kernels-by-Using-Genetic-Algorithms-for-Grayscale-images/blob/main/images/badge_CO.png" width="300" height="50">
 </p>
 
 ```xml
