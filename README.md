@@ -10,6 +10,7 @@ This is the official repository of the article *AutoQML: Automatic Generation an
 
 DOI: https://arxiv.org/abs/2208.13246
 
+*Sergio Altares-López, Juan José García-Ripoll, Angela Ribeiro (2023) AutoQML: Quantum Inspired Kernels by Using Genetic Algorithms for Grayscale Images. https://doi.org/10.24433/CO.3955535.v1*
 
 ### Abstract
 
