@@ -10,24 +10,6 @@ This is the official repository of the article *AutoQML: Automatic Generation an
 
 DOI: https://arxiv.org/abs/2208.13246
 
-The code for this work has been verified and published on the Code Ocean platform, where the Reproducibility Badge has been granted, indicating that it is functional. *Sergio Altares-López, Juan José García-Ripoll, Angela Ribeiro (2023) AutoQML: Quantum Inspired Kernels by Using Genetic Algorithms for Grayscale Images. https://doi.org/10.24433/CO.3955535.v1*
-
-<p align="center">
-    <img src="https://github.com/sergio94al/AutoQML-Quantum-Inspired-Kernels-by-Using-Genetic-Algorithms-for-Grayscale-images/blob/main/images/badge_CO.png" width="275" height="50">
-</p>
-
-```xml
-@misc{d8c085c8-ea11-47ff-ab90-9715ffc2b39d,
-  title = {AutoQML: Quantum Inspired Kernels by Using Genetic Algorithms for Grayscale Images},
-  author = {Sergio Altares-López and Juan José García-Ripoll and Angela Ribeiro},
-   journal = {Expert Systems with Applications},
-  doi = {10.24433/CO.3955535.v1}, 
-  howpublished = {\url{https://www.codeocean.com/}},
-  year = 2023,
-  month = {11},
-  version = {v1}
-}
-```
 ### Abstract
 
 A new hybrid system is proposed for automatically generating and training quantum-inspired classifiers on grayscale images by using multiobjective genetic algorithms. It is defined a dynamic fitness function to obtain the smallest circuit complexity and highest accuracy on unseen data, ensuring that the proposed technique is generalizable and robust. At the same time, it is minimized the
@@ -123,8 +105,29 @@ In the CAE approach, a small convolutional autoencoder neural network is pretrai
 
 ## 4. Results: Pareto Front and Best Quantum Circuit
 
-## 5. How to Use the Code
-### 5.1. Files Description
+## 5. Verified Code - Code Ocean Reproducibility Badge
+
+The code for this work has been verified and published on the Code Ocean platform, where the Reproducibility Badge has been granted, indicating that it is functional. *Sergio Altares-López, Juan José García-Ripoll, Angela Ribeiro (2023) AutoQML: Quantum Inspired Kernels by Using Genetic Algorithms for Grayscale Images. https://doi.org/10.24433/CO.3955535.v1*
+
+<p align="center">
+    <img src="https://github.com/sergio94al/AutoQML-Quantum-Inspired-Kernels-by-Using-Genetic-Algorithms-for-Grayscale-images/blob/main/images/badge_CO.png" width="275" height="50">
+</p>
+
+```xml
+@misc{d8c085c8-ea11-47ff-ab90-9715ffc2b39d,
+  title = {AutoQML: Quantum Inspired Kernels by Using Genetic Algorithms for Grayscale Images},
+  author = {Sergio Altares-López and Juan José García-Ripoll and Angela Ribeiro},
+   journal = {Expert Systems with Applications},
+  doi = {10.24433/CO.3955535.v1}, 
+  howpublished = {\url{https://www.codeocean.com/}},
+  year = 2023,
+  month = {11},
+  version = {v1}
+}
+```
+
+## 6. How to Use the Code
+### 6.1. Files Description
 
 * circuit.py: We create the quantum operators that will composed the quantum circuit.
 * fitness.py: Evaluation fuction of the genetic algorithm (we fit 2 variables to return -the objetives)
@@ -134,12 +137,12 @@ In the CAE approach, a small convolutional autoencoder neural network is pretrai
 * encoding2.py: This file is used to visualize and obtain the solution after the evolution.
 * Visualizing.ipynb: Execute this file to generate a quantum circuit from the designated folder of pickles. Ensure that you select the one with the highest accuracy and minimal complexity, as indicated in the file name.
 * QSVM_Name.ipynb: Execute this file to run the implementation of the genetic algorithm, which generates optimal quantum circuits by calling the corresponding .py files. Users can customize parameters based on their specific requirements.
-## 6. References
+## 7. References
 * [1] https://github.com/sergio94al/Automatic_design_of_quantum_feature_maps_Genetic_Auto-Generation
 * [2] Altares-López, S., Ribeiro, A., & García-Ripoll, J. J. (2021). Automatic design of quantum feature maps. Quantum Science and Technology, 6(4), 045015. (https://iopscience.iop.org/article/10.1088/2058-9565/ac1ab1)
 * [3] Fortin, F. A., De Rainville, F. M., Gardner, M. A. G., Parizeau, M., & Gagné, C. (2012). DEAP: Evolutionary algorithms made easy. The Journal of Machine Learning Research, 13(1), 2171-2175. (https://deap.readthedocs.io/en/master/index.html)
 * [4] Deb, K., Pratap, A., Agarwal, S., & Meyarivan, T. A. M. T. (2002). A fast and elitist multiobjective genetic algorithm: NSGA-II. IEEE transactions on evolutionary computation, 6(2), 182-197.
 * [5] Sklearn. Support Vector Machine. https://scikit-learn.org/stable/modules/svm.html
-## 7. Public Datasets
+## 8. Public Datasets
 * [1] N. Chakrabarty, Brain dataset, https://www.kaggle.com/navoneel/brain-mri-images-for-brain-tumor-detection/metadata (April 2019).
 * [2] P. Raikote, Covid-19 dataset, https://www.kaggle.com/pranavraikokte/covid19-image-dataset/metadata (2020).
