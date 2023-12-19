@@ -104,6 +104,13 @@ In the CAE approach, a small convolutional autoencoder neural network is pretrai
 * Iterate the processes starting from Step 4 until the algorithm converges or the defined stop conditions are reached, obtaining the Pareto front.
 
 ## 4. Results: Pareto Front and Best Quantum Circuit
+Este sistema, permite obtener circuitos-solución que se van posicionando en el frente de Pareto basado en las métricas obtenidas en la función de fitness. Se pretende obtener el mejor clasificador con la menor complejidad posible, siempore que no afecte a la métrica principal: accuracy.
+
+<p align="center">
+  <img src="https://github.com/sergio94al/AutoQML-Quantum-Inspired-Kernels-by-Using-Genetic-Algorithms-for-Grayscale-images/blob/main/images/par" width="900" height="450">
+</p>
+
+Este circuto, 
 
 ## 5. Verified Code - Code Ocean Reproducibility Badge
 
