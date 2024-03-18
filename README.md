@@ -150,6 +150,7 @@ The code for this work has been verified and published on the Code Ocean platfor
 * [3] Fortin, F. A., De Rainville, F. M., Gardner, M. A. G., Parizeau, M., & Gagné, C. (2012). DEAP: Evolutionary algorithms made easy. The Journal of Machine Learning Research, 13(1), 2171-2175. (https://deap.readthedocs.io/en/master/index.html)
 * [4] Deb, K., Pratap, A., Agarwal, S., & Meyarivan, T. A. M. T. (2002). A fast and elitist multiobjective genetic algorithm: NSGA-II. IEEE transactions on evolutionary computation, 6(2), 182-197.
 * [5] Sklearn. Support Vector Machine. https://scikit-learn.org/stable/modules/svm.html
+* [6] Altares-López, S., García-Ripoll, J. J., & Ribeiro, A. (2024). AutoQML: Automatic generation and training of robust quantum-inspired classifiers by using evolutionary algorithms on grayscale images. Expert Systems with Applications, 244, 122984.
 ## 9. Public Datasets
 * [1] N. Chakrabarty, Brain dataset, https://www.kaggle.com/navoneel/brain-mri-images-for-brain-tumor-detection/metadata (April 2019).
 * [2] P. Raikote, Covid-19 dataset, https://www.kaggle.com/pranavraikokte/covid19-image-dataset/metadata (2020).
