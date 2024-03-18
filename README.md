@@ -119,7 +119,7 @@ The code for this work has been verified and published on the Code Ocean platfor
 
 ## 6. How to cite
 
-**Please note this code is the official code for article *AutoQML: Automatic generation and training of robust quantum-inspired classifiers by using evolutionary algorithms on grayscale images.*. Authors of scientific papers including results generated using this technique or these ideas, are encouraged to cite this paper as follows.**
+**Please note this code is the official code for article *AutoQML: Automatic generation and training of robust quantum-inspired classifiers by using evolutionary algorithms on grayscale images*. Authors of scientific papers including results generated using this technique or these ideas, are encouraged to cite this paper as follows.**
 
 * Altares-López, S., García-Ripoll, J. J., & Ribeiro, A. (2024). AutoQML: Automatic generation and training of robust quantum-inspired classifiers by using evolutionary algorithms on grayscale images. Expert Systems with Applications, 244, 122984.
 ```xml
