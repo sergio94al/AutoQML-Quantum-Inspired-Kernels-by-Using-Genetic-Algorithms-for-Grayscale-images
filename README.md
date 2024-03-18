@@ -24,7 +24,8 @@ methods are compared with one another and with a classical nonlinear approach to
 * Generate an **automatic and optimized system for data encoding** of classical information into the quantum feature maps.
 * Take into account the use case, generating **ad-hoc classifiers for each data set**.
 * **PCA components optimization** within the individuals of the genetic algorithm.
-* Application of **quantum circuits on high dimensionality** data such as images.
+* **Transfer learning** model applied externally before quantum medical image classification.
+* Application of **quantum circuits on high dimensionality** data such as images and comparison among methods.
 * Search of **quantum-inspired solutions** that can be implemented on classical computers.
 * Capacity to include **many variables in few qubits**.
 
