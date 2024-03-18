@@ -131,7 +131,26 @@ The code for this work has been verified and published on the Code Ocean platfor
 ```
 ## 6. How to cite
 
-*S. Altares-López, J.J. García-Ripoll and A. Ribeiro, AutoQML: Automatic generation and training of robust quantum-inspired classifiers by using evolutionary algorithms on grayscale images. Expert Systems With Applications (2023), doi: https://doi.org/10.1016/j.eswa.2023.122984.*
+**Please note this code is the official code for article *AutoQML: Automatic generation and training of robust quantum-inspired classifiers by using evolutionary algorithms on grayscale images.*. Authors of scientific papers including results generated using this technique or these ideas, are encouraged to cite this paper as follows.**
+
+* Altares-López, S., García-Ripoll, J. J., & Ribeiro, A. (2024). AutoQML: Automatic generation and training of robust quantum-inspired classifiers by using evolutionary algorithms on grayscale images. Expert Systems with Applications, 244, 122984.
+```xml
+@article{Altares_Lopez_2024,
+   title={AutoQML: Automatic generation and training of robust quantum-inspired classifiers by using evolutionary algorithms on grayscale images},
+   volume={244},
+   ISSN={0957-4174},
+   url={http://dx.doi.org/10.1016/j.eswa.2023.122984},
+   DOI={10.1016/j.eswa.2023.122984},
+   journal={Expert Systems with Applications},
+   publisher={Elsevier BV},
+   author={Altares-López, Sergio and García-Ripoll, Juan José and Ribeiro, Angela},
+   year={2024},
+   month=jun, pages={122984} }
+
+```
+<p align="center">
+  <img src="https://github.com/sergio94al/Automatic-design-of-quantum-feature-maps/blob/main/Images/Logo_agrupado.png" width="510" height="140">
+</p>
 
 ## 7. How to Use the Code
 ### 7.1. Files Description
