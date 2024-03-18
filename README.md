@@ -117,18 +117,6 @@ The code for this work has been verified and published on the Code Ocean platfor
     <img src="https://github.com/sergio94al/AutoQML-Quantum-Inspired-Kernels-by-Using-Genetic-Algorithms-for-Grayscale-images/blob/main/images/badge_CO.png" width="275" height="50">
 </p>
 
-```xml
-@misc{d8c085c8-ea11-47ff-ab90-9715ffc2b39d,
-  title = {AutoQML: Quantum Inspired Kernels by Using Genetic Algorithms for Grayscale Images},
-  author = {Sergio Altares-López and Juan José García-Ripoll and Angela Ribeiro},
-   journal = {Expert Systems with Applications},
-  doi = {10.24433/CO.3955535.v1}, 
-  howpublished = {\url{https://www.codeocean.com/}},
-  year = 2023,
-  month = {11},
-  version = {v1}
-}
-```
 ## 6. How to cite
 
 **Please note this code is the official code for article *AutoQML: Automatic generation and training of robust quantum-inspired classifiers by using evolutionary algorithms on grayscale images.*. Authors of scientific papers including results generated using this technique or these ideas, are encouraged to cite this paper as follows.**
